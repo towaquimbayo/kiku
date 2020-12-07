@@ -76,16 +76,8 @@ body.alert-show .navbar.fixed-top {
     height: 12px;
 }
 
-.carousel .carousel-item {
-    height: 100vh;
-}
-
 .carousel-item img {
-    position: absolute;
-    object-fit:cover;
-    top: 0;
-    left: 0;
-    min-height: 100vh;
+    object-fit: cover;
 }
 
 #indicator{
