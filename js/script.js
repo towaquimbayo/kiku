@@ -24,6 +24,24 @@ $(function() {
     });
 });
 
+// when scrolled, navbar shrinks
+window.onscroll = function(){
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        document.getElementById("myNav").style.padding = "0px 0";
+        document.getElementById("logo").style.width = "50px";
+        document.getElementById("logo").style.height = "50px";
+    } 
+    else {
+        document.getElementById("myNav").style.padding = "25px 0px";
+        document.getElementById("logo").style.width = "80px";
+        document.getElementById("logo").style.height = "80px";
+    }
+}
+
 // filter gallery
 filterSelection("all");
 
