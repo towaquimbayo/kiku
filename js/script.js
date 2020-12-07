@@ -1,103 +1,71 @@
-// notification animation when clicked
-showAlert = function() {
-    $('body').addClass('alert-show');
-}
+$(document).ready(function(){
+    // notification animation when clicked
+    showAlert = function() {
+        $('body').addClass('alert-show');
+    }
 
-hideAlert = function() {
-    $('body').removeClass('alert-show');
-}
+    hideAlert = function() {
+        $('body').removeClass('alert-show');
+    }
 
-// auto show
-setTimeout(function() {
-    showAlert();
-}, 1000);
+    // auto show
+    setTimeout(function() {
+        showAlert();
+    }, 1000);
 
-$(".close").click(function(){
-    hideAlert();
-});
-
-// navbar bg color changes when scrolled down
-$(function() {
-    $(document).scroll(function () {
-        var $nav = $(".navbar.fixed-top");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $(".close").click(function(){
+        hideAlert();
     });
-});
 
-// when scrolled, navbar shrinks
-window.onscroll = function(){
-    scrollFunction()
-};
+    // navbar bg color changes when scrolled down
+    $(function() {
+        $(document).scroll(function () {
+            var $nav = $(".navbar.fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
 
-function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-        document.getElementById("myNav").style.padding = "0px 0";
-        document.getElementById("logo").style.width = "50px";
-        document.getElementById("logo").style.height = "50px";
-    } 
-    else {
-        document.getElementById("myNav").style.padding = "25px 0px";
-        document.getElementById("logo").style.width = "80px";
-        document.getElementById("logo").style.height = "80px";
-    }
-}
+    // when scrolled, navbar shrinks
+    window.onscroll = function(){
+        scrollFunction()
+    };
 
-// filter gallery
-filterSelection("all");
-
-// filter category
-function filterSelection(cat) {
-    var x = document.getElementsByClassName("imgCol");
-    var i;
-    if (cat == "all"){
-        cat = "";
-    }
-
-    for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(cat) > -1){
-            w3AddClass(x[i], "show");
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+            document.getElementById("myNav").style.padding = "0px 0";
+            document.getElementById("logo").style.width = "50px";
+            document.getElementById("logo").style.height = "50px";
         } 
-    }
-}
-
-function w3AddClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1){
-            element.className += " " + arr2[i];
+        else {
+            document.getElementById("myNav").style.padding = "25px 0px";
+            document.getElementById("logo").style.width = "80px";
+            document.getElementById("logo").style.height = "80px";
         }
     }
-}
 
-function w3RemoveClass(element, name) {
-    var arr1 = element.className.split(" "); 
-    var arr2 = name.split(" ");
-
-    for (var i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
+    // filter gallery
+    if($('.btn-outline-dark').hasClass('active')){
+        $('.imgCol').show('1000');
     }
-    element.className = arr1.join(" ");
-}
 
-var btnContainer = document.getElementById("btnContainer");
-var btns = btnContainer.getElementsByClassName("btn btn-outline-dark");
+    $('.btn-outline-dark').click(function(){
+        const value = $(this).attr('data-filter');
+        if(value == 'all'){
+            $('.imgCol').show('1000');
+        }
+        else{
+            $('.imgCol').not('.' + value).hide('1000');
+            $('.imgCol').filter('.' + value).show('1000');
+        }
+    })
 
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "HAHAH");
-        this.className += " active";
-    });
-}
+    $('.btn-outline-dark').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })    
+    
+});
 
 // Google Maps API Integration
-
 // Initialize and add the map
 function initMap() {
     // The location of Uluru
