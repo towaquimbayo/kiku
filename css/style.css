@@ -219,6 +219,11 @@ hr{
     font-size: 14px;
 }
 
+#colID-2{
+    border: 1px solid #000;
+    background: #c42727;
+    color: #fff;
+}
 
 /* GALLERY SECTION */
 .gallery{
@@ -232,13 +237,11 @@ hr{
     flex-wrap: wrap;
     align-items: flex-start;
     flex-direction: row;
-    /* padding: 20px; */
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.7); 
     
 }
 
 .row-1 img{
-    /* margin: 10px; */
     padding: 5px;
     max-width: 20vw;
 }
@@ -282,7 +285,6 @@ hr{
     color: #000;
     font-weight: bold;
 }
-
 
 .card-text-1{
     font-size: 15px;
