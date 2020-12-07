@@ -128,7 +128,7 @@ hr{
 }
 
 .cardContainer{
-   padding: 80px 0;
+   padding: 40px 0;
    width: 60vw;
    margin: auto;
 }
@@ -197,7 +197,8 @@ hr{
     text-align: center;
     width: 100%;
     overflow: hidden;
-    padding: 80px auto;
+    padding: 40px 0;
+    margin: auto;
 }
 
 .aboutContent{
@@ -227,7 +228,7 @@ hr{
 
 /* GALLERY SECTION */
 .gallery{
-    padding: 80px 0;
+    padding: 40px 0;
     width: 60vw;
     margin: auto;
 }
@@ -266,7 +267,7 @@ hr{
 
 /* OUR TEAM SECTION */
 .ourTeam{
-    padding: 80px 0;
+    padding: 40px 0;
     width: 60vw;
     margin: auto;
 }
@@ -292,6 +293,12 @@ hr{
 }
 
 /* STORE SECTION */
+.storeContainer{
+    width: 100%;
+    padding: 40px 0;
+    margin: auto;
+}
+
 #map {
     height: 500px;
     width: 100%;
