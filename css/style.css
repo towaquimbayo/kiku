@@ -9,6 +9,10 @@ body{
 }
 
 #myNav{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -23,11 +27,19 @@ body{
 }
 
 .navbar.fixed-top {
-    transition: top .5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out;
+    -moz-transition: top 0.5s ease-in-out;
+    -ms-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
 }
 
 .navbar.fixed-top.scrolled {
     background:rgba(0, 0, 0, 0.8)!important;
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
 }
 
@@ -41,7 +53,11 @@ body{
     position: fixed;
     width: 100%;
     top: -50px;
-    transition: top .5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out;
+    -moz-transition: top 0.5s ease-in-out;
+    -ms-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
     z-index: 1000;
 }
 
@@ -63,6 +79,10 @@ body.alert-show .navbar.fixed-top {
     right: 0;
     bottom: 0;
     top: 56%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -86,7 +106,15 @@ body.alert-show .navbar.fixed-top {
 
 #indicator.active{
     border: 1px solid rgba(0, 0, 0, 0.8);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
     transform: scale(2);
 }
 
@@ -144,36 +172,24 @@ hr{
 /* sushi */
 #sushi{
     background: url('../img/sushi.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 /* hotpot */
 #hotpot{
     background: url('../img/hotpot.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 /* grill */
 #grill{
     background: url('../img/grill.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 /* sake */
 #sake{
     background: url('../img/sake.png') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -206,7 +222,7 @@ hr{
 }
 
 .row{
-    display:table-row;
+    display: table-row;
 }
 
 .column{
@@ -239,7 +255,6 @@ hr{
     align-items: flex-start;
     flex-direction: row;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.7); 
-    
 }
 
 .row-1 img{
@@ -253,6 +268,10 @@ hr{
 
 #btnContainer{
     text-align: center;
+    -webkit-transition: all 0.5 ease;
+    -moz-transition: all 0.5 ease;
+    -ms-transition: all 0.5 ease;
+    -o-transition: all 0.5 ease;
     transition: all 0.5 ease;
     margin-bottom: 50px;
 }
@@ -332,6 +351,10 @@ hr{
     list-style: none;
     margin: 10px;
     font-size: 18px;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     border-radius: 50%;
 }
@@ -357,6 +380,10 @@ hr{
 }
 
 .socialMedia li:hover{
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
     transform: translateY(-5px);
     box-shadow: 0 10px 10px rgba(0,0,0,0.5);
 }
