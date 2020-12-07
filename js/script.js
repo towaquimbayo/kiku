@@ -44,11 +44,11 @@ $(document).ready(function(){
     }
 
     // filter gallery
-    if($('.btn-outline-dark').hasClass('active')){
+    if($('.btn-outline-danger').hasClass('active')){
         $('.imgCol').show('1000');
     }
 
-    $('.btn-outline-dark').click(function(){
+    $('.btn-outline-danger').click(function(){
         const value = $(this).attr('data-filter');
         if(value == 'all'){
             $('.imgCol').show('1000');
@@ -59,7 +59,7 @@ $(document).ready(function(){
         }
     })
 
-    $('.btn-outline-dark').click(function(){
+    $('.btn-outline-danger').click(function(){
         $(this).addClass('active').siblings().removeClass('active');
     })    
     
