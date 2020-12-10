@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"> 
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
 </head>
 <body>
 
@@ -34,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mynav" id="myNav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" class="d-inline-block align-top" id="logo">
+                <img src="img/logo.png" alt="Kiku Logo" class="d-inline-block align-top" id="logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,8 +70,8 @@
     <!-- carousel slider -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-caption">
-            <h1>Taste of Japan</h1>
-            <p class="carousel-message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+            <h1 class="carousel-title">Taste of Japan</h1>
+            <p class="carousel-message">The most authentic Japanese Cuisine in Vancouver that offers traditional meals for an affordable price.</p>
             <a href='#'>
                 <button type="button" id="ctaBtn" class="btn btn-danger">VIEW MENU</button>
             </a>
@@ -120,20 +121,20 @@
         <hr />
 
         <div class="card-columns d-flex justify-content-center">
-            <div class="card" id="sushi" style="width: 25rem; height: 15rem;">
+            <div class="card" id="sushi">
                 <div class="card-body" id="overlay" style="padding: 30px; margin: auto;">
                     <h5 class="card-title">SUSHI</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Cooked vinegared rice combined with raw seafood and vegetables.</p>
                     <a href='#'>
                         <button type="button" id="viewBtn" class="btn btn-danger">VIEW</button>
                     </a>
                 </div>
             </div>
             
-            <div class="card" id="hotpot" style="width: 25rem; height: 15rem;">
+            <div class="card" id="hotpot">
                 <div class="card-body" id="overlay" style="padding: 30px;">
                     <h5 class="card-title">NOODLES, HOT POT, SOUP</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">A mixture of fresh vegetables, meat, seafood, and tofu all to be cooked in a simmering soup broth in a pot.</p>
                     <a href='#'>
                         <button type="button" id="viewBtn" class="btn btn-danger">VIEW</button>
                     </a>
@@ -142,20 +143,20 @@
         </div>
 
         <div class="card-columns d-flex justify-content-center">
-            <div class="card" id="grill" style="width: 25rem; height: 15rem;">
+            <div class="card" id="grill">
                 <div class="card-body" id="overlay" style="padding: 30px;">
                     <h5 class="card-title">GRILL</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Uses the Japanese Teppan, an iron griddle to cook steak, shrimp, okonomiyaki, yakisoba and monjayaki.</p>
                     <a href='#'>
                         <button type="button" id="viewBtn" class="btn btn-danger">VIEW</button>
                     </a>
                 </div>
             </div>
             
-            <div class="card" id="sake" style="width: 25rem; height: 15rem;">
+            <div class="card" id="sake">
                 <div class="card-body" id="overlay" style="padding: 30px;">
                     <h5 class="card-title">SAKE</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Traditional Japanese alcoholic drink that brings high quality from its authentic fermented rice.</p>
                     <a href='#'>
                         <button type="button" id="viewBtn" class="btn btn-danger">VIEW</button>
                     </a>
@@ -166,18 +167,16 @@
 
     <!-- About Section -->
     <div class="aboutContainer">
-        <div class="row">
+        <div class="row" style="display: table-row;">
             <div class="column" id="colID-1">
-                <img src="img/about.jpg" style="width:100%">
+                <img src="img/about.jpg" alt="Our Chef" style="width:100%">
             </div>
             <div class="column" id="colID-2">
                 <div class="aboutContent" style="width:100%;">
-                    <h3 style="font-weight: bold!important;padding-bottom: 30px;">WHO WE ARE</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                    <h3>WHO WE ARE</h3>
+                    <p>A Japanese restaurant that has served affordable and authentic Japanese cuisine since 2010. Kiku provieds you the option to order online for a delivery or booking a reservation.</p>
 
-                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                        
-                    <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                    <p>We have an image gallery available for anyone curious to see how our meals are like.</p>
 
                     <a href='#'>
                         <button type="button" id="readMore" class="btn btn-outline-light">READ MORE</button>
@@ -304,7 +303,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -317,35 +316,35 @@
 
         <hr />
 
-        <p style="text-align: center;padding-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
 
         <div class="row">
-            <div class="column">
-                <div class="card-1" style="width: 16rem;">
-                    <img class="card-img-top" src="img/towa.jpg" alt="Carter Dorsett">
+            <div class="col-md-4">
+                <div class="card-1">
+                    <img class="card-img-top" src="img/carter.jpg" alt="Carter Dorsett">
                     <div class="card-body">
                         <h5 class="card-title-1">Carter Dorsett</h5>
-                        <p class="card-text-1" style="padding: 0;">Graphic Designer</p>
+                        <p class="card-text-1">Graphic Designer</p>
                         <a target="_blank" href="http://carterdorsett.ca/" class="btn btn-danger">Portfolio</a>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="card-1" style="width: 16rem;">
+            <div class="col-md-4">
+                <div class="card-1">
                     <img class="card-img-top" src="img/towa.jpg" alt="Towa Quimbayo">
                     <div class="card-body">
                         <h5 class="card-title-1">Towa Quimbayo</h5>
-                        <p class="card-text-1" style="padding: 0;">Front End Developer</p>
+                        <p class="card-text-1">Front End Developer</p>
                         <a target="_blank" href="http://towaquimbayo.com/" class="btn btn-danger">Portfolio</a>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="card-1" style="width: 16rem;">
-                    <img class="card-img-top" src="img/towa.jpg" alt="Andrew Chang">
+            <div class="col-md-4">
+                <div class="card-1">
+                    <img class="card-img-top" src="img/andrew.jpg" alt="Andrew Chang">
                     <div class="card-body">
                         <h5 class="card-title-1">Andrew Chang</h5>
-                        <p class="card-text-1" style="padding: 0;">QA Designer</p>
+                        <p class="card-text-1">QA Lead Designer</p>
                         <a target="_blank" href="https://andrewchang17.com/" class="btn btn-danger">Portfolio</a>
                     </div>
                 </div>
@@ -354,13 +353,14 @@
     </div>
 
     <div class="storeContainer">
-        <div class="row-2">
-            <div class="column-2">
+        
+        <div class="row" id="storeRow">
+            <div class="column">
                 <div id="map"></div>
             </div>
-            <div class="column-3">
-                <div class="aboutContent" style="width:100%;">
-                    <h3 style="font-weight: bold!important;padding-bottom: 30px;">STORE INFO</h3>
+            <div class="column" id="storeColumn">
+                <div class="aboutContent" id="storeContent" style="width:100%;">
+                    <h3>STORE INFO</h3>
                     <p>Sunday: 9 AM - 8 PM</p>
                     <p>Monday - Saturday: 9 AM - 10 PM</p>
 

@@ -33,13 +33,13 @@ $(document).ready(function(){
     function scrollFunction() {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
             document.getElementById("myNav").style.padding = "0px 0";
-            document.getElementById("logo").style.width = "50px";
-            document.getElementById("logo").style.height = "50px";
+            document.getElementById("logo").style.width = "5vw";
+            document.getElementById("logo").style.height = "5vw";
         } 
         else {
             document.getElementById("myNav").style.padding = "25px 0px";
-            document.getElementById("logo").style.width = "80px";
-            document.getElementById("logo").style.height = "80px";
+            document.getElementById("logo").style.width = "7vw";
+            document.getElementById("logo").style.height = "7vw";
         }
     }
 

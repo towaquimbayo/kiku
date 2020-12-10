@@ -51,7 +51,7 @@ body{
 /* ALERT NOTIFICATION BAR */
 .alert {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: -50px;
     -webkit-transition: top 0.5s ease-in-out;
     -moz-transition: top 0.5s ease-in-out;
@@ -73,12 +73,12 @@ body.alert-show .navbar.fixed-top {
 .carousel-caption {
     text-shadow: 0 3px 2px rgba(0,0,0,0.6);
     position: absolute;
-    max-width: 60vw;
+    max-width: 100vw;
     margin: 0;
     left: 50%;
     right: 0;
     bottom: 0;
-    top: 56%;
+    top: 60%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -138,7 +138,12 @@ body.alert-show .navbar.fixed-top {
     margin: 10px 15px!important;
 }
 
+.carousel-title{
+    font-size: 2.6rem;
+}
+
 .carousel-message{
+    font-size: 1rem;
     padding: 15px 0;
 }
 
@@ -193,6 +198,11 @@ hr{
     background-size: cover;
 }
 
+.card{
+    width: 25rem;
+    height: 15rem;
+}
+
 .card-title{
     color: #fff;
     font-weight: bold;
@@ -219,10 +229,6 @@ hr{
 
 .aboutContent{
     padding: 0 70px;
-}
-
-.row{
-    display: table-row;
 }
 
 .column{
@@ -276,12 +282,24 @@ hr{
     margin-bottom: 50px;
 }
 
+#btnContainer button{
+    font-size: 1.2rem;
+}
+
+#btnContainer button:not(:last-child){
+    margin-right: 10px;
+}
+
 .btn.active{
     font-weight: bold;
 }
 
 .show {
     display: block;
+}
+
+.modal-footer{
+    justify-content: center;
 }
 
 /* OUR TEAM SECTION */
@@ -291,13 +309,18 @@ hr{
     margin: auto;
 }
 
-.card-img-top{
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.ourTeam p{
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .card-1{
     text-align: center;
+    margin: 0;
+}
+
+.card-body{
+    background: rgb(255, 255, 255);
     border: rgba(0, 0, 0, 0.5) solid 1px;
 }
 
@@ -306,45 +329,42 @@ hr{
     font-weight: bold;
 }
 
-.card-text-1{
-    font-size: 15px;
-    color: #000;
-}
-
 /* STORE SECTION */
 .storeContainer{
     width: 100%;
     padding: 40px 0;
     margin: auto;
+    text-align: left;
+    overflow: hidden;
 }
 
 #map {
-    height: 500px;
+    height: 400px;
     width: 100%;
 }
 
-.row-2{
-    display: flex;
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#storeRow{
+    display: flex; 
     flex-direction: row;
-    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
-.column-2{
-    vertical-align: middle;
-    width: 60%;
-}
-
-.column-3{
-    margin: auto;
-    vertical-align: middle;
-    width: 40%;
+#storeColumn{
+    align-self: center;
 }
 
 /* SOCIAL MEDIA */
 .socialMedia{
     display: flex;
+    flex-direction: row;
     text-align: center;
     padding: 0;
+    margin-bottom: 0px;
 }
 
 .socialMedia li{
@@ -402,35 +422,404 @@ footer{
     color: #fff;
 }
 
-/* MOBILE OPTIMIZATION */
-@media (max-width: 991px) {
-    .mynav{
-        background:rgba(0, 0, 0, 0.7)!important;
+/* RESPONSIVE OPTIMIZATION */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .notiContent{
+        font-size: 0.75rem;
     }
-    .navbar-nav > li > a {
-        line-height: 70px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        height: auto !important;
-        overflow: visible !important;
+    .mynav{
+        background:rgba(0, 0, 0, 0.8)!important;
     }
     .nav-item{
         text-align: center;
     }
-    .navbar-dark .navbar-nav .nav-link{
-        font-size: 1.5rem;
+    .navbar-nav > li > a {
+        line-height: 10px;
+        padding-top: 20px;
+        padding-bottom: 80px;
     }
+    .navbar-nav li:nth-child(6) {
+        padding-bottom: 400px;
+    }
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 1.7rem;
+    }
+    .container{
+        padding-left: 18px!important;
+        padding-right: 18px!important;
+    }
+    .carousel-caption{
+        top: 55%;
+    }
+    .carousel-title{
+        font-size: 2rem;
+    }
+    .carousel-message{
+        font-size: 0.75rem;
+        padding: 15px 0;
+    }
+    #ctaBtn{
+        font-size: 0.8rem;
+    }
+    .card-title{
+        font-size: 0.75rem;
+    }
+    .cardContainer{
+        padding: 40px 0;
+        width: 90vw;
+        margin: auto;
+    }
+    .card-text{
+        font-size: 0.65rem;
+        color: #fff;
+        padding-top: 0px;
+    }
+    .column{
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    #colID-2{
+        height: 250px;
+    }
+    .aboutContent{
+        padding: 0 20px;
+    }
+    .aboutContent h3{
+        font-size: 1rem;
+        font-weight: bold!important;
+        padding-bottom: 20px;
+    }
+    .aboutContent p{
+        font-size: 0.6rem;
+        padding-bottom: 10px;
+    }
+    #readMore{
+        font-size: 0.6rem;
+    }
+    .gallery{
+        padding: 40px 0;
+        width: 90vw;
+        margin: auto;
+    }
+    .row-1 img{
+        max-width: 90vw;
+    }
+    #btnContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    #btnContainer button{
+        font-size: 1rem;
+    }
+    #btnContainer button:not(:last-child){
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    .ourTeam{
+        padding: 40px 0;
+        width: 90vw;
+        margin: auto;
+    }
+    .card-title-1{
+        font-size: 1.75rem;
+    }
+    .card-text-1{
+        font-size: 1.25rem;
+    }
+    #storeContent{
+        text-align: center;
+    }
+    #storeContent h3{
+        padding-top: 30px;
+        font-size: 1.2rem;
+    }
+    #storeContent p{
+        font-size: 0.8rem;
+    }
+    .socialMedia{
+        justify-content: center;
+    }
+    .socialMedia li a{
+        font-size: 12px;
+    }
+    .socialMedia li a{
+        padding: 12px;
+        width: 40px;
+    }
+}   
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
     .notiContent{
-        font-size: 12px!important;
+        font-size: 1rem;
+    }
+    .mynav{
+        background:rgba(0, 0, 0, 0.8)!important;
+    }
+    .nav-item{
+        text-align: center;
+    }
+    .navbar-nav > li > a {
+        line-height: 10px;
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+    .navbar-nav li:nth-child(6) {
+        padding-bottom: 500px;
+    }
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 1.6rem;
+    }
+    .carousel-caption{
+        top: 58%;
+    }
+    .carousel-title{
+        font-size: 2rem;
+    }
+    .carousel-message{
+        font-size: 0.75rem;
+        padding: 15px 0;
+    }
+    #ctaBtn{
+        font-size: 0.8rem;
+    }
+    .card-title{
+        font-size: 1rem;
+    }
+    .cardContainer{
+        padding: 40px 0;
+        width: 90vw;
+        margin: auto;
+    }
+    .card-text{
+        font-size: 0.75rem;
+        color: #fff;
+        padding-top: 15px;
+    }
+    .column{
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    #colID-2{
+        height: 400px;
+    }
+    .aboutContent h3{
+        font-size: 1.5rem;
+        font-weight: bold!important;
+        padding-bottom: 30px;
+    }
+    .aboutContent p{
+        font-size: 1rem;
+        padding-bottom: 20px;
+    }
+    #readMore{
+        font-size: 1rem;
+    }
+    .gallery{
+        padding: 40px 0;
+        width: 90vw;
+        margin: auto;
+    }
+    .row-1 img{
+        max-width: 45vw;
+    }
+    #btnContainer button{
+        font-size: 1rem;
+    }
+    .ourTeam{
+        padding: 40px 0;
+        width: 90vw;
+        margin: auto;
+    }
+    .card-title-1{
+        font-size: 2rem;
+    }
+    .card-text-1{
+        font-size: 1.325rem;
+    }
+    #storeContent{
+        text-align: center;
+    }
+    #storeContent h3{
+        padding-top: 30px;
+    }
+    .socialMedia{
+        justify-content: center;
     }
 }
 
-@media (max-height: 670px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .notiContent{
+        font-size: 1.1rem;
+    }
+    .mynav{
+        background:rgba(0, 0, 0, 0.8)!important;
+    }
+    .nav-item{
+        text-align: center;
+    }
     .navbar-nav > li > a {
-        line-height: 50px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        height: auto !important;
-        overflow: visible !important;
+        line-height: 10px;
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+    .navbar-nav li:nth-child(6) {
+        padding-bottom: 380px;
+    }
+    .navbar-dark .navbar-nav .nav-link{
+        font-size: 1.5rem;
+    }
+    .carousel-title{
+        font-size: 2.5rem;
+    }
+    .carousel-message{
+        font-size: 0.8rem;
+        padding: 15px 0;
+    }
+    #ctaBtn{
+        font-size: 0.9rem;
+    }
+    .cardContainer{
+        padding: 40px 0;
+        width: 80vw;
+        margin: auto;
+    }
+    .card-title{
+        font-size: 1.25rem;
+    }
+    .card-text{
+        font-size: 0.75rem;
+        color: #fff;
+        padding-top: 20px;
+    }
+    .column{
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    #colID-2{
+        height: 400px;
+    }
+    .aboutContent h3{
+        font-size: 1.75rem;
+        font-weight: bold!important;
+        padding-bottom: 30px;
+    }
+    .aboutContent p{
+        font-size: 1rem;
+        padding-bottom: 20px;
+    }
+    #readMore{
+        font-size: 1rem;
+    }
+    .gallery{
+        padding: 40px 0;
+        width: 80vw;
+        margin: auto;
+    }
+    .row-1 img{
+        max-width: 40vw;
+    }
+    #btnContainer button{
+        font-size: 1.2rem;
+    }
+    .ourTeam{
+        padding: 40px 0;
+        width: 80vw;
+        margin: auto;
+    }
+    .card-title-1{
+        font-size: 1.5rem;
+    }
+    .card-text-1{
+        font-size: 1.1rem;
+    }
+    #storeContent{
+        text-align: center;
+    }
+    #storeContent h3{
+        padding-top: 30px;
+    }
+    .socialMedia{
+        justify-content: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .notiContent{
+        font-size: 1.1rem;
+    }
+    .carousel-title{
+        font-size: 2.75rem;
+    }
+    .carousel-message{
+        font-size: 0.9rem;
+        padding: 15px 0;
+    }
+    #ctaBtn{
+        font-size: 1rem;
+    }
+    .cardContainer{
+        padding: 40px 0;
+        width: 80vw;
+        margin: auto;
+    }
+    .card-text{
+        font-size: 12px;
+        color: #fff;
+        padding-top: 35px;
+    }
+    .aboutContent h3{
+        font-size: 1.25rem;
+        font-weight: bold!important;
+        padding-bottom: 30px;
+    }
+    .aboutContent p{
+        font-size: 0.8rem;
+    }
+    #readMore{
+        font-size: 0.8rem;
+    }
+    .gallery{
+        padding: 40px 0;
+        width: 80vw;
+        margin: auto;
+    }
+    .row-1 img{
+        max-width: 40vw;
+    }
+    #btnContainer button{
+        font-size: 1.2rem;
+    }
+    .ourTeam{
+        padding: 40px 0;
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .notiContent{
+        font-size: 1rem;
+    }
+    .aboutContent h3{
+        font-size: 1.75rem;
+        font-weight: bold!important;
+        padding-bottom: 30px;
+    }
+    .aboutContent p{
+        font-size: 1rem;
+    }
+    #readMore{
+        font-size: 1rem;
     }
 }
